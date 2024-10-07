@@ -272893,6 +272893,14 @@ function {
   parameter_id: 0x00c72527
 }
 function {
+  id: 0x1c33c003
+  return_type_id: 0x48b5725f
+  parameter_id: 0x32caaf24
+  parameter_id: 0x064d6086
+  parameter_id: 0x064d6086
+  parameter_id: 0x6720d32f
+}
+function {
   id: 0x1c362eb2
   return_type_id: 0x48b5725f
   parameter_id: 0x32a623d7
@@ -279742,6 +279750,12 @@ function {
   id: 0x6f542f9d
   return_type_id: 0x347303b4
   parameter_id: 0x6720d32f
+  parameter_id: 0x1bf16028
+}
+function {
+  id: 0x6f6bc9a5
+  return_type_id: 0x38d23361
+  parameter_id: 0x32caaf24
   parameter_id: 0x1bf16028
 }
 function {
@@ -340724,6 +340738,15 @@ elf_symbol {
   full_name: "l2cap_is_socket"
 }
 elf_symbol {
+  id: 0x17e9fb87
+  name: "led_blink_set_oneshot"
+  is_defined: true
+  symbol_type: FUNCTION
+  crc: 0x2c73eb22
+  type_id: 0x1c33c003
+  full_name: "led_blink_set_oneshot"
+}
+elf_symbol {
   id: 0x709f7fc8
   name: "led_classdev_flash_register_ext"
   is_defined: true
@@ -340767,6 +340790,15 @@ elf_symbol {
   crc: 0x6b198c77
   type_id: 0x430f5497
   full_name: "led_colors"
+}
+elf_symbol {
+  id: 0x61740d72
+  name: "led_get_default_pattern"
+  is_defined: true
+  symbol_type: FUNCTION
+  crc: 0x670b0f2b
+  type_id: 0x6f6bc9a5
+  full_name: "led_get_default_pattern"
 }
 elf_symbol {
   id: 0xda95494e
@@ -371813,11 +371845,13 @@ interface {
   symbol_id: 0x6e8c6baf
   symbol_id: 0x3ae24a16
   symbol_id: 0x713c49dc
+  symbol_id: 0x17e9fb87
   symbol_id: 0x709f7fc8
   symbol_id: 0xa58e6f5d
   symbol_id: 0xfe24eb71
   symbol_id: 0x27d77d55
   symbol_id: 0x5569d19c
+  symbol_id: 0x61740d72
   symbol_id: 0xda95494e
   symbol_id: 0xa5be7046
   symbol_id: 0xbea2c272
