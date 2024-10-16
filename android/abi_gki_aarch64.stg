@@ -304568,6 +304568,14 @@ function {
   parameter_id: 0x33756485
 }
 function {
+  id: 0xe66d986c
+  return_type_id: 0x9cf21ab5
+  parameter_id: 0x18ea6ae3
+  parameter_id: 0x33756485
+  parameter_id: 0x33756485
+  parameter_id: 0x9cf21ab5
+}
+function {
   id: 0xe6b0ea6f
   return_type_id: 0x2e8ad82b
   parameter_id: 0x3a583251
@@ -348004,6 +348012,15 @@ elf_symbol {
   full_name: "phylink_suspend"
 }
 elf_symbol {
+  id: 0x8721302c
+  name: "phys_mem_access_prot"
+  is_defined: true
+  symbol_type: FUNCTION
+  crc: 0x0eae322c
+  type_id: 0xe66d986c
+  full_name: "phys_mem_access_prot"
+}
+elf_symbol {
   id: 0xfa197680
   name: "pick_highest_pushable_task"
   is_defined: true
@@ -372651,6 +372668,7 @@ interface {
   symbol_id: 0x69dcbd79
   symbol_id: 0x14fb1d7f
   symbol_id: 0xae5a377c
+  symbol_id: 0x8721302c
   symbol_id: 0xfa197680
   symbol_id: 0x4ef078c0
   symbol_id: 0x634946e6

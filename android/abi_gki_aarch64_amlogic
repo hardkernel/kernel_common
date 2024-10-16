@@ -2688,3 +2688,6 @@
   led_set_brightness_nosleep
   led_blink_set_oneshot
   led_get_default_pattern
+
+# aml-gpiomem.ko
+  phys_mem_access_prot
