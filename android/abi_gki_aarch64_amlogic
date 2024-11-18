@@ -2691,3 +2691,6 @@
 
 # aml-gpiomem.ko
   phys_mem_access_prot
+
+# amlogic-spi.ko
+  spi_delay_exec
