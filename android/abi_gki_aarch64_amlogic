@@ -2730,3 +2730,18 @@
   usb_poison_urb
   usb_put_intf
   usb_unpoison_urb
+
+# dht11.ko
+  ktime_get_resolution_ns
+
+# drm_mipi_abi.ko
+  drm_gem_fb_create_with_dirty
+  drm_gem_fb_end_cpu_access
+  drm_fb_xrgb8888_to_rgb565
+  drm_fb_memcpy
+  drm_fb_swab
+  drm_gem_fb_begin_cpu_access
+
+#  ili9341.ko
+  drm_gem_cma_prime_import_sg_table_vmap
+  devm_of_find_backlight
