@@ -2748,3 +2748,12 @@
 
 # spidev.ko
   device_property_match_string
+
+# goodix.ko
+  touchscreen_report_pos
+  touchscreen_parse_properties
+  input_alloc_absinfo
+  input_mt_init_slots
+  input_mt_report_slot_state
+  input_mt_sync_frame
+  input_set_abs_params
