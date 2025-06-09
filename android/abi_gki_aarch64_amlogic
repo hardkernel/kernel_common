@@ -2757,3 +2757,8 @@
   input_mt_report_slot_state
   input_mt_sync_frame
   input_set_abs_params
+
+# pwm_bl.ko
+  pwm_free
+  pwm_request
+  regulator_is_enabled
