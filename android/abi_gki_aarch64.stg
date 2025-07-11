@@ -3834,6 +3834,11 @@ pointer_reference {
   pointee_type_id: 0x19d93429
 }
 pointer_reference {
+  id: 0x0ce80834
+  kind: POINTER
+  pointee_type_id: 0x19e0c64c
+}
+pointer_reference {
   id: 0x0ce9a2bb
   kind: POINTER
   pointee_type_id: 0x19e66c71
@@ -20894,6 +20899,11 @@ pointer_reference {
   pointee_type_id: 0xeb5dea97
 }
 pointer_reference {
+  id: 0x30484bfe
+  kind: POINTER
+  pointee_type_id: 0xeb61c965
+}
+pointer_reference {
   id: 0x304f6b42
   kind: POINTER
   pointee_type_id: 0xeb7d4b96
@@ -26154,6 +26164,11 @@ pointer_reference {
   pointee_type_id: 0xdf713fb7
 }
 pointer_reference {
+  id: 0x3d52d75b
+  kind: POINTER
+  pointee_type_id: 0xdf0bbbf0
+}
+pointer_reference {
   id: 0x3d551c03
   kind: POINTER
   pointee_type_id: 0xdf149691
@@ -26452,6 +26467,11 @@ pointer_reference {
   id: 0x3ddfcba9
   kind: POINTER
   pointee_type_id: 0xdd3fc83b
+}
+pointer_reference {
+  id: 0x3de01d60
+  kind: POINTER
+  pointee_type_id: 0xddc0931f
 }
 pointer_reference {
   id: 0x3de3e357
@@ -31492,6 +31512,11 @@ qualified {
   id: 0xeb5dea97
   qualifier: CONST
   qualified_type_id: 0xdd301cd7
+}
+qualified {
+  id: 0xeb61c965
+  qualifier: CONST
+  qualified_type_id: 0xddc0931f
 }
 qualified {
   id: 0xeba4823c
@@ -100623,6 +100648,18 @@ member {
   offset: 320
 }
 member {
+  id: 0x16507b8b
+  name: "invert_x"
+  type_id: 0x6d7f5ff6
+  offset: 64
+}
+member {
+  id: 0x5490facf
+  name: "invert_y"
+  type_id: 0x6d7f5ff6
+  offset: 72
+}
+member {
   id: 0x5fad2025
   name: "io_barrier"
   type_id: 0xa46efa19
@@ -114776,6 +114813,11 @@ member {
   offset: 1136
 }
 member {
+  id: 0x72abbebd
+  name: "max_x"
+  type_id: 0x4585663f
+}
+member {
   id: 0x9af65776
   name: "max_xfer"
   type_id: 0xe62ebf07
@@ -114786,6 +114828,12 @@ member {
   name: "max_xor"
   type_id: 0xc93e017b
   offset: 672
+}
+member {
+  id: 0xb2287342
+  name: "max_y"
+  type_id: 0x4585663f
+  offset: 32
 }
 member {
   id: 0xb2de157c
@@ -121784,6 +121832,12 @@ member {
   bitsize: 1
 }
 member {
+  id: 0xf79a533a
+  name: "native_mode"
+  type_id: 0x4585663f
+  offset: 32
+}
+member {
   id: 0x24fa7507
   name: "native_pcie_hotplug"
   type_id: 0x4585663f
@@ -128555,6 +128609,11 @@ member {
   type_id: 0x295c7202
   offset: 1177
   bitsize: 7
+}
+member {
+  id: 0x349420c4
+  name: "num_timings"
+  type_id: 0x4585663f
 }
 member {
   id: 0x8026d50a
@@ -172511,6 +172570,12 @@ member {
   offset: 1792
 }
 member {
+  id: 0x6f829472
+  name: "swap_x_y"
+  type_id: 0x6d7f5ff6
+  offset: 80
+}
+member {
   id: 0xcb840ba6
   name: "swapin_count"
   type_id: 0xedf277ba
@@ -177096,6 +177161,12 @@ member {
   name: "timing"
   type_id: 0x5d8155a5
   offset: 128
+}
+member {
+  id: 0x1f55657f
+  name: "timings"
+  type_id: 0x0ce80834
+  offset: 64
 }
 member {
   id: 0x1f6734de
@@ -206861,6 +206932,17 @@ struct_union {
     member_id: 0x0306d4bf
     member_id: 0xb2ad9e5f
     member_id: 0x2d0ec9dd
+  }
+}
+struct_union {
+  id: 0xdf0bbbf0
+  kind: STRUCT
+  name: "display_timings"
+  definition {
+    bytesize: 16
+    member_id: 0x349420c4
+    member_id: 0xf79a533a
+    member_id: 0x1f55657f
   }
 }
 struct_union {
@@ -240681,6 +240763,19 @@ struct_union {
   }
 }
 struct_union {
+  id: 0xddc0931f
+  kind: STRUCT
+  name: "touchscreen_properties"
+  definition {
+    bytesize: 12
+    member_id: 0x72abbebd
+    member_id: 0xb2287342
+    member_id: 0x16507b8b
+    member_id: 0x5490facf
+    member_id: 0x6f829472
+  }
+}
+struct_union {
   id: 0x358a5bb8
   kind: STRUCT
   name: "trace_array"
@@ -268557,6 +268652,15 @@ function {
   parameter_id: 0x1333434c
 }
 function {
+  id: 0x1459aedb
+  return_type_id: 0x48b5725f
+  parameter_id: 0x1042c9d1
+  parameter_id: 0x30484bfe
+  parameter_id: 0x4585663f
+  parameter_id: 0x4585663f
+  parameter_id: 0x6d7f5ff6
+}
+function {
   id: 0x145d4e91
   return_type_id: 0x48b5725f
   parameter_id: 0x15c389f6
@@ -269014,6 +269118,13 @@ function {
   id: 0x152401b7
   return_type_id: 0x33756485
   parameter_id: 0x92233392
+}
+function {
+  id: 0x1532669f
+  return_type_id: 0x48b5725f
+  parameter_id: 0x1042c9d1
+  parameter_id: 0x6d7f5ff6
+  parameter_id: 0x3de01d60
 }
 function {
   id: 0x15334a4f
@@ -277777,6 +277888,11 @@ function {
   return_type_id: 0x21069feb
   parameter_id: 0x3c9a9fb2
   parameter_id: 0x6720d32f
+}
+function {
+  id: 0x4d744842
+  return_type_id: 0x3d52d75b
+  parameter_id: 0x322c8c4b
 }
 function {
   id: 0x4d878509
@@ -344543,6 +344659,15 @@ elf_symbol {
   full_name: "of_get_cpu_node"
 }
 elf_symbol {
+  id: 0x824695bc
+  name: "of_get_display_timings"
+  is_defined: true
+  symbol_type: FUNCTION
+  crc: 0x52d478c0
+  type_id: 0x4d744842
+  full_name: "of_get_display_timings"
+}
+elf_symbol {
   id: 0x05a46d27
   name: "of_get_drm_display_mode"
   is_defined: true
@@ -360344,6 +360469,24 @@ elf_symbol {
   full_name: "touch_softlockup_watchdog"
 }
 elf_symbol {
+  id: 0x47d78ddb
+  name: "touchscreen_parse_properties"
+  is_defined: true
+  symbol_type: FUNCTION
+  crc: 0xbc36d7aa
+  type_id: 0x1532669f
+  full_name: "touchscreen_parse_properties"
+}
+elf_symbol {
+  id: 0x961122f4
+  name: "touchscreen_report_pos"
+  is_defined: true
+  symbol_type: FUNCTION
+  crc: 0xd1062d00
+  type_id: 0x1459aedb
+  full_name: "touchscreen_report_pos"
+}
+elf_symbol {
   id: 0xa7da1ac2
   name: "trace_array_destroy"
   is_defined: true
@@ -372394,6 +372537,7 @@ interface {
   symbol_id: 0xe506b8c8
   symbol_id: 0xe2b0e5a5
   symbol_id: 0xb8036e9c
+  symbol_id: 0x824695bc
   symbol_id: 0x05a46d27
   symbol_id: 0xe3de7018
   symbol_id: 0x26fb2401
@@ -374149,6 +374293,8 @@ interface {
   symbol_id: 0xd3e5c9bd
   symbol_id: 0x3217f3a4
   symbol_id: 0xf7dfdad1
+  symbol_id: 0x47d78ddb
+  symbol_id: 0x961122f4
   symbol_id: 0xa7da1ac2
   symbol_id: 0xe2481840
   symbol_id: 0x9fa2aa18

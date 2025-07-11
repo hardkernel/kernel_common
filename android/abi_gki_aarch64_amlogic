@@ -2757,3 +2757,13 @@
   input_mt_report_slot_state
   input_mt_sync_frame
   input_set_abs_params
+
+# aml_drm.ko
+  of_get_display_timings
+  of_get_drm_display_mode
+  drm_display_mode_from_videomode
+  drm_mode_destroy
+  memscan
+  videomode_from_timing
+  #kernel_read
+  #filp_open
