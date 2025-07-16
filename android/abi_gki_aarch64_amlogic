@@ -2765,5 +2765,6 @@
   drm_mode_destroy
   memscan
   videomode_from_timing
-  #kernel_read
-  #filp_open
+  kernel_read
+  filp_open
+  filp_close
