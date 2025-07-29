@@ -334,10 +334,10 @@ config ARCH_MESON_ODROID_COMMON
 config ARCH_MESON_ODROIDC5
 	bool "Hardkernel's ODROID-C5 Single Board Computer"
 	select ARCH_MESON_ODROID_COMMON
-	select GPIO_RESET_CONTROLLER
-	select BACKLIGHT_PWM
-	select DRM_LT8619C_QC4011
-	select TOUCHSCREEN_GOODIX
+	#select GPIO_RESET_CONTROLLER
+	#select BACKLIGHT_PWM
+	#select DRM_LT8619C_QC4011
+	#select TOUCHSCREEN_GOODIX
 
 	help
 	  This enables support for the board ODROID-C5 of Hardkernel
