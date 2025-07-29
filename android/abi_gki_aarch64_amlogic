@@ -2768,3 +2768,12 @@
   kernel_read
   filp_open
   filp_close
+
+# gpio-reset.ko
+  reset_controller_register
+  reset_controller_unregister
+
+# pwm_bl.ko
+  pwm_free
+  pwm_request
+  regulator_is_enabled

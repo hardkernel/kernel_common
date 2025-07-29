@@ -267497,6 +267497,14 @@ function {
   parameter_id: 0x0858434c
 }
 function {
+  id: 0x12948e10
+  return_type_id: 0xd5cc9c9a
+  parameter_id: 0x18ea6ae3
+  parameter_id: 0x18bd6530
+  parameter_id: 0xf435685e
+  parameter_id: 0x0379c823
+}
+function {
   id: 0x1299bf81
   return_type_id: 0x48b5725f
   parameter_id: 0x0b30ee00
@@ -271019,6 +271027,11 @@ function {
   return_type_id: 0x48b5725f
   parameter_id: 0x2e8d5f05
   parameter_id: 0xc9082b19
+}
+function {
+  id: 0x18213096
+  return_type_id: 0x48b5725f
+  parameter_id: 0x22e58417
 }
 function {
   id: 0x182284a8
@@ -332735,6 +332748,16 @@ elf_symbol {
   full_name: "filp_close"
 }
 elf_symbol {
+  id: 0x53e39586
+  name: "filp_open"
+  is_defined: true
+  symbol_type: FUNCTION
+  crc: 0x6c27f78b
+  namespace: "VFS_internal_I_am_really_a_filesystem_and_am_NOT_a_driver"
+  type_id: 0x4f8ed2d9
+  full_name: "filp_open"
+}
+elf_symbol {
   id: 0x8bbdb127
   name: "filp_open_block"
   is_defined: true
@@ -339770,6 +339793,16 @@ elf_symbol {
   crc: 0xf184d189
   type_id: 0x10985193
   full_name: "kernel_power_off"
+}
+elf_symbol {
+  id: 0x6b16d642
+  name: "kernel_read"
+  is_defined: true
+  symbol_type: FUNCTION
+  crc: 0x8e3f45a2
+  namespace: "VFS_internal_I_am_really_a_filesystem_and_am_NOT_a_driver"
+  type_id: 0x12948e10
+  full_name: "kernel_read"
 }
 elf_symbol {
   id: 0x05b57a3a
@@ -352300,6 +352333,15 @@ elf_symbol {
   crc: 0x3c904c4e
   type_id: 0x9539822a
   full_name: "reset_controller_register"
+}
+elf_symbol {
+  id: 0x8607d899
+  name: "reset_controller_unregister"
+  is_defined: true
+  symbol_type: FUNCTION
+  crc: 0x41f9e914
+  type_id: 0x18213096
+  full_name: "reset_controller_unregister"
 }
 elf_symbol {
   id: 0x1d945826
@@ -371216,6 +371258,7 @@ interface {
   symbol_id: 0x6a53de0c
   symbol_id: 0xc7c68a05
   symbol_id: 0xb9dc79d0
+  symbol_id: 0x53e39586
   symbol_id: 0x8bbdb127
   symbol_id: 0xeaf15c9b
   symbol_id: 0x02b1ce77
@@ -371995,6 +372038,7 @@ interface {
   symbol_id: 0xff4a14be
   symbol_id: 0x4e60d546
   symbol_id: 0x0e6a648c
+  symbol_id: 0x6b16d642
   symbol_id: 0x05b57a3a
   symbol_id: 0x5da7d3fd
   symbol_id: 0x51fc2e7c
@@ -373386,6 +373430,7 @@ interface {
   symbol_id: 0x48fc2cb6
   symbol_id: 0xb5e4cc08
   symbol_id: 0xd41c441b
+  symbol_id: 0x8607d899
   symbol_id: 0x1d945826
   symbol_id: 0xd8c7c137
   symbol_id: 0xa3f52060
