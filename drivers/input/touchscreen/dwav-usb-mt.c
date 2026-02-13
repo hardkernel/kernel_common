@@ -351,6 +351,31 @@ static int dwav_usb_mt_init(struct dwav_usb_mt *dwav_usb_mt, void *dev)
 	dwav_usb_mt->input = input_dev;
 	return  0;
 }
+
+static char *disable_vu7;
+module_param(disable_vu7, charp, 0644);
+MODULE_PARM_DESC(disable_vu7, "set to disable vu7");
+
+static bool dwav_usb_mt_ignore(const struct usb_device_id *id)
+{
+	bool result = false;
+
+	if (!disable_vu7)
+		return false;
+
+	pr_info("disable_vu7 = %s\n", disable_vu7);
+
+	if (!strncmp(disable_vu7, "true", 4))
+		result = true;
+	else
+		pr_err("%s - wrong disable_vu7 parameter", __func__);
+
+	if (result && id->driver_info == ODROID_VU7)
+		return true;
+	else
+		return false;
+}
+
 /*-------------------------------------------------------------------------*/
 static int dwav_usb_mt_probe(struct usb_interface *intf,
 			  const struct usb_device_id *id)
@@ -360,6 +385,11 @@ static int dwav_usb_mt_probe(struct usb_interface *intf,
 	struct usb_endpoint_descriptor *endpoint;
 	struct usb_device *udev = interface_to_usbdev(intf);
 	int err = 0;
+
+	/* ignore the vu7 id when using other device */
+	if (dwav_usb_mt_ignore(id))
+		return -ENODEV;
+
 	endpoint = dwav_usb_mt_get_input_endpoint(intf->cur_altsetting);
 	if (!endpoint)
 		return  -ENXIO;
