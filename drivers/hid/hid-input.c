@@ -638,7 +638,7 @@ static void hidinput_configure_usage(struct hid_input *hidinput, struct hid_fiel
 
 		switch (field->application) {
 		case HID_GD_MOUSE:
-		case HID_GD_POINTER:  code += BTN_MOUSE; break;
+		case HID_GD_POINTER:  code += BTN_TOUCH; break;
 		case HID_GD_JOYSTICK:
 				if (code <= 0xf)
 					code += BTN_JOYSTICK;
@@ -665,7 +665,7 @@ static void hidinput_configure_usage(struct hid_input *hidinput, struct hid_fiel
 		default:
 			switch (field->physical) {
 			case HID_GD_MOUSE:
-			case HID_GD_POINTER:  code += BTN_MOUSE; break;
+			case HID_GD_POINTER:  code += BTN_TOUCH; break;
 			case HID_GD_JOYSTICK: code += BTN_JOYSTICK; break;
 			case HID_GD_GAMEPAD:  code += BTN_GAMEPAD; break;
 			default:              code += BTN_MISC;
