@@ -58,6 +58,20 @@ static const struct {
 #define map_key_clear(c)	hid_map_usage_clear(hidinput, usage, &bit, \
 		&max, EV_KEY, (c))
 
+static bool mouse2touch;
+
+static int __init mouse2touch_setup(char *s)
+{
+	pr_info("mouse2touch = %s\n", s);
+	if (!strncmp(s, "true", 4))
+		mouse2touch = true;
+	else
+		mouse2touch = false;
+
+	return 0;
+}
+__setup("mouse2touch=", mouse2touch_setup);
+
 static bool match_scancode(struct hid_usage *usage,
 			   unsigned int cur_idx, unsigned int scancode)
 {
@@ -638,7 +652,13 @@ static void hidinput_configure_usage(struct hid_input *hidinput, struct hid_fiel
 
 		switch (field->application) {
 		case HID_GD_MOUSE:
-		case HID_GD_POINTER:  code += BTN_TOUCH; break;
+		case HID_GD_POINTER:
+			// ODROID
+			if (mouse2touch)
+				code += BTN_TOUCH;
+			else
+				code += BTN_MOUSE;
+			break;
 		case HID_GD_JOYSTICK:
 				if (code <= 0xf)
 					code += BTN_JOYSTICK;
@@ -665,7 +685,13 @@ static void hidinput_configure_usage(struct hid_input *hidinput, struct hid_fiel
 		default:
 			switch (field->physical) {
 			case HID_GD_MOUSE:
-			case HID_GD_POINTER:  code += BTN_TOUCH; break;
+			case HID_GD_POINTER:
+				// ODROID
+				if (mouse2touch)
+					code += BTN_TOUCH;
+				else
+					code += BTN_MOUSE;
+				break;
 			case HID_GD_JOYSTICK: code += BTN_JOYSTICK; break;
 			case HID_GD_GAMEPAD:  code += BTN_GAMEPAD; break;
 			default:              code += BTN_MISC;
